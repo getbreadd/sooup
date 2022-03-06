@@ -98,6 +98,21 @@
               <li class="mdl-menu__item">Dolor</li>
             </ul>
           </section>
+          <!-- CUSTOMIZE PAGE SECTION -->
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col">Customize</h4>
+                <div class="mdl-cell mdl-cell--2-col">
+                  <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                    <h5>Background Colour</h5>
+                  </div>
+                  <input type="color" id="colourInputColour" style="align-content: center;">
+                </div>
+                <input type='button' id='colourButton' value='Change' style='height: min-content; align-self: flex-end;' onclick="changeColour()">
+              </div>
+            </div>
+          </section>
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
@@ -178,15 +193,6 @@
           <section class="section--center mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--12-col">
               <h4>Features</h4>
-              <form name=bckgrd-colour >
-                <input type="color" id="colourInputColour">
-                <input name="colours" list="colours" placeholder="background colour" size=30>
-                <datalist id='colours'>
-                  <option value='red'></option>
-                  <option value="blue"></option>
-                </datalist>
-                <input type='button' id='colourButton' value='change' onclick="changeColour()">
-              </form>
               Minim duis incididunt est cillum est ex occaecat consectetur. Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
               <ul class="toc">
                 <h4>Contents</h4>
@@ -298,6 +304,8 @@
       function changeColour() {
         let colour = document.getElementById('colourInputColour').value;
         document.body.style.backgroundColor = colour;
+        document.getElementById('features').style.backgroundColor = colour;
+        document.getElementById('overview').style.backgroundColor = colour;
       }
     </script>
 
