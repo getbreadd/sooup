@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Starter Kit</title>
+    <title>Sooup</title>
 
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
@@ -99,8 +99,16 @@
               <li class="mdl-menu__item">Dolor</li>
             </ul>
           </section>
+          <!-- CHATBOX PLACEHOLDER -->
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id='chatBox'>
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4>ChatBox</h4>
+              </div>
+            </div>
+          </section>
           <!-- CUSTOMIZE PAGE SECTION -->
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id='customize'>
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                 <h4 class="mdl-cell mdl-cell--12-col">Customize</h4>
@@ -110,7 +118,17 @@
                   </div>
                   <input type="color" id="colourInputColour" style="align-content: center;">
                 </div>
-                <input type='button' id='colourButton' value='Change' style='height: min-content; align-self: flex-end;' onclick="changeBackgroundColour()">
+                <div class="mdl-cell mdl-cell--5-col">
+                  <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                    <h5>Background Image</h5>
+                  </div>
+                  <form>
+                    <label for="img">Select Background Image:</label>
+                    <input type="text" id="backgroundImageInput" placeholder="Background Image URL" onfocus="this.placeholder=''" onblur="this.placeholder='Background Image URL'">
+                  </form>
+                  <!-- <input type="url" id="BackgroundImageInput" placeholder="Background Image" style="align-content: center;" size = 40> -->
+                </div>
+                <input type='submit' id='colourButton' value='Change' style='height: min-content; align-self: flex-end;' onclick="changeBackgroundImage(); changeBackgroundColour(); document.getElementById('backgroundImageInput').value=''">
               </div>
             </div>
           </section>
@@ -172,7 +190,7 @@
               <li class="mdl-menu__item">Dolor</li>
             </ul>
           </section>
-          <section class="section--footer mdl-color--white mdl-grid">
+          <section class="section--footer mdl-grid" style="background-color: rgba(255,255,2555,0.5); margin-bottom: 0%; padding-bottom: 0%;">
             <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
               <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
             </div>
@@ -188,7 +206,9 @@
               Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
             </div>
           </section>
-          <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          <section class="section--footer mdl-grid--no-spacing" style="background-color: rgba(255,255,2555,0.5); margin-bottom: 0%; padding-bottom: 0%;">
+            <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </section>
         </div>
         <!-- <div class="mdl-layout__tab-panel" id="features">
           <section class="section--center mdl-grid mdl-grid--no-spacing">
@@ -302,11 +322,17 @@
     </div>
 
     <script>
+      // Change background image precedes colour change
       function changeBackgroundColour() {
         let colour = document.getElementById('colourInputColour').value;
         document.body.style.backgroundColor = colour;
         // document.getElementById('features').style.backgroundColor = colour;
         document.getElementById('overview').style.backgroundColor = colour;
+      }
+      function changeBackgroundImage() {
+        let bImg = document.getElementById('backgroundImageInput').value;
+        document.getElementById('overview').style.backgroundImage = "url(" + bImg + ")";
+        // document.getElementById('overview').style.backgroundImage = "url(https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png)";
       }
     </script>
 
