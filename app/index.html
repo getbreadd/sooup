@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="">
   <head>
+    <script defer src="https://widget-js.cometchat.io/v3/cometchatwidget.js"></script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
@@ -110,6 +112,54 @@
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                 <h4>ChatBox</h4>
+                <div>
+                <script src = "index.js"></script>
+                <div id = "get-username">
+                  <label>Enter your username: (superhero1 or superhero2)</label>
+                  <input type = "text" placeholder = "username" id = "username-input">
+                  <button type = "button" id = "cometchat-button">Login</button>
+                </div>
+               
+                <div id="cometchat" class = "chatbox-size"></div>
+
+                <script>
+                  const element = document.getElementById("cometchat-button");
+                  element.addEventListener("click", openChat);
+
+                  function openChat() {
+                    var username = document.getElementById("username-input").value;
+                    document.getElementById("get-username").innerHTML = "";
+                    CometChatWidget.init({
+                      "appID": "2048111024eb033b",
+                      "appRegion": "us",
+                      "authKey": "d3ffbe72b01086f082058ca3413ba3675eedcfaf"
+                    }).then(response => {
+                      console.log("Initialization completed successfully");
+                      //You can now call login function.
+                      CometChatWidget.login({
+                        "uid": username
+                      }).then(response => {
+                        CometChatWidget.launch({
+                          "widgetID": "f2112f96-a86b-4c4b-abdf-9a4475077033",
+                          "target": "#cometchat",
+                          "roundedCorners": "true",
+                          "height": "500px",
+                          "width": "700px",
+                          "defaultID": username, //default UID (user) or GUID (group) to show,
+                          "defaultType": 'user' //user or group
+                        });
+                      }, error => {
+                        console.log("User login failed with error:", error);
+                        //Check the reason for error and take appropriate action.
+                      });
+                    }, error => {
+                      console.log("Initialization failed with error:", error);
+                      //Check the reason for error and take appropriate action.
+                    });
+                  }
+
+                </script>
+                </div>
               </div>
             </div>
           </section>
