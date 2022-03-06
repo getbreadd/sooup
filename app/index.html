@@ -54,15 +54,16 @@
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--teal-100">
+        <img src="/app/images/Sooup_Header.png" style="width: 14rem;">
+        <!-- <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>Web Starter Kit</h3>
+          <h3>SOOUP</h3>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+        </div> -->
+        <!-- <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
           <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
           <a href="#features" class="mdl-layout__tab">Features</a>
           <a href="#features" class="mdl-layout__tab">Details</a>
@@ -72,7 +73,7 @@
             <i class="material-icons" role="presentation">add</i>
             <span class="visuallyhidden">Add</span>
           </button>
-        </div>
+        </div> -->
       </header>
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
@@ -109,7 +110,7 @@
                   </div>
                   <input type="color" id="colourInputColour" style="align-content: center;">
                 </div>
-                <input type='button' id='colourButton' value='Change' style='height: min-content; align-self: flex-end;' onclick="changeColour()">
+                <input type='button' id='colourButton' value='Change' style='height: min-content; align-self: flex-end;' onclick="changeBackgroundColour()">
               </div>
             </div>
           </section>
@@ -189,7 +190,7 @@
           </section>
           <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
-        <div class="mdl-layout__tab-panel" id="features">
+        <!-- <div class="mdl-layout__tab-panel" id="features">
           <section class="section--center mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--12-col">
               <h4>Features</h4>
@@ -243,7 +244,7 @@
               </p>
             </div>
           </section>
-        </div>
+        </div> -->
         <footer class="mdl-mega-footer">
           <div class="mdl-mega-footer--middle-section">
             <div class="mdl-mega-footer--drop-down-section">
@@ -301,10 +302,10 @@
     </div>
 
     <script>
-      function changeColour() {
+      function changeBackgroundColour() {
         let colour = document.getElementById('colourInputColour').value;
         document.body.style.backgroundColor = colour;
-        document.getElementById('features').style.backgroundColor = colour;
+        // document.getElementById('features').style.backgroundColor = colour;
         document.getElementById('overview').style.backgroundColor = colour;
       }
     </script>
