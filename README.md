@@ -21,6 +21,7 @@ For those with mental illnesses, or struggling with their mental illnesses, it i
 
 💛 Todo list section is also handy and at bay, as it is often helpful for those struggling with mental health issues, as motivation depletion is often a large daily hinderance 
 
+<img width="1200" alt="image" src="https://user-images.githubusercontent.com/61668987/156937686-16a40683-45b7-4957-9f89-aa560334f3e5.png">
 
 ## Further/Future Development
 
