@@ -178,6 +178,15 @@
           <section class="section--center mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--12-col">
               <h4>Features</h4>
+              <form name=bckgrd-colour >
+                <input type="color" id="colourInputColour">
+                <input name="colours" list="colours" placeholder="background colour" size=30>
+                <datalist id='colours'>
+                  <option value='red'></option>
+                  <option value="blue"></option>
+                </datalist>
+                <input type='button' id='colourButton' value='change' onclick="changeColour()">
+              </form>
               Minim duis incididunt est cillum est ex occaecat consectetur. Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
               <ul class="toc">
                 <h4>Contents</h4>
@@ -284,6 +293,13 @@
         </footer>
       </main>
     </div>
+
+    <script>
+      function changeColour() {
+        let colour = document.getElementById('colourInputColour').value;
+        document.body.style.backgroundColor = colour;
+      }
+    </script>
 
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <!-- build:js scripts/main.min.js -->

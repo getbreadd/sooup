@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Whack-ussy</title>
 
     <!-- ??comment??Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
@@ -18,7 +18,7 @@
     <meta name="application-name" content="Web Starter Kit">
     <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
-    <!-- HELLO THIS IS A COMMENT THIS IS A TERRIBLE COMMENT Add to homescreen for Safari on iOS -->
+    <!-- HELLO THIS IS A COMMENT THIS IS A TERRIBLE COMMENT VERY TERRIBLE Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
@@ -38,6 +38,37 @@
   </head>
   <body>
     <!-- Add your site or app content here -->
+    <input list="elements" placeholder="themes" size=100>
+    <datalist id='elements'>
+      <option value='background'></option>
+    </datalist>
+    <input type='button' id='themeButton' value='change' onclick="changeColour()">
+    <div class="panel panel-primary" id='background' style="background-color: beige;">
+      <div class="panel-header">
+      //header Goes here 
+      </div>
+      <div class="panel-body">
+        //Body here 
+        <form name=bckgrd-colour >
+          <input type="color" id="colourInputColour">
+          <input name="colours" list="colours" placeholder="background colour" size=30>
+          <datalist id='colours'>
+            <option value='red'></option>
+            <option value="blue"></option>
+          </datalist>
+          <input type='button' id='colourButton' value='change' onclick="changeColour()">
+        </form>
+      </div>
+      <div class="panel-footer">\
+        //footer
+      </div>
+    </div>
+    <script>
+      function changeColour() {
+        let colour = document.getElementById('colourInputColour').value;
+        document.body.style.backgroundColor = colour;
+      }
+    </script>
 
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/main.js"></script>
