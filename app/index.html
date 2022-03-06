@@ -313,31 +313,6 @@ input {
               </div>
             </div>
           </section>
-          <!-- CUSTOMIZE PAGE SECTION -->
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id='customize'>
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                <h4 class="mdl-cell mdl-cell--12-col">Customize</h4>
-                <div class="mdl-cell mdl-cell--2-col">
-                  <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                    <h5>Background Colour</h5>
-                  </div>
-                  <input type="color" id="colourInputColour" style="align-content: center;">
-                </div>
-                <div class="mdl-cell mdl-cell--5-col">
-                  <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                    <h5>Background Image</h5>
-                  </div>
-                  <form>
-                    <label for="img">Select Background Image:</label>
-                    <input type="text" id="backgroundImageInput" placeholder="Background Image URL" onfocus="this.placeholder=''" onblur="this.placeholder='Background Image URL'">
-                  </form>
-                  <!-- <input type="url" id="BackgroundImageInput" placeholder="Background Image" style="align-content: center;" size = 40> -->
-                </div>
-                <input type='submit' id='colourButton' value='Change' style='height: min-content; align-self: flex-end;' onclick="changeBackgroundImage(); changeBackgroundColour(); document.getElementById('backgroundImageInput').value=''">
-              </div>
-            </div>
-          </section>
         <!--  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
@@ -472,6 +447,31 @@ input {
             </div>
           </section>
         </div> -->
+
+        <!-- CUSTOMIZE PAGE SECTION -->
+        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id='customize'>
+          <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+              <h4 class="mdl-cell mdl-cell--12-col">Customize</h4>
+              <div class="mdl-cell mdl-cell--2-col">
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Background Colour</h5>
+                </div>
+                <input type="color" id="colourInputColour" style="align-content: center;">
+              </div>
+              <div class="mdl-cell mdl-cell--10-col">
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>Background Image</h5>
+                </div>
+                <form style="margin: 8px;">
+                  <label for="backgroundImageInput">Select Image:</label>
+                  <input type="text" id="backgroundImageInput" placeholder="Background Image URL" onfocus="this.placeholder=''" onblur="this.placeholder='Background Image URL'" style="width: 100%;">
+                </form>
+              </div>
+              <input type='submit' id='colourButton' value='Change' style='height: min-content; width: 100%; align-self: flex-end;' onclick="changeBackgroundImage(); changeBackgroundColour(); document.getElementById('backgroundImageInput').value=''">
+            </div>
+          </div>
+        </section>
 
         <section>
           <div id="myDIV" class="header">
