@@ -255,10 +255,31 @@ input {
                 
                   <div id="cometchat" class = "chatbox-size"></div>
 
+                  <div id = "supportMessages">
+                    <!-- <p>Copy the check in text below if needed!</p>
+                    <p id = "copy-text">I'm ok!
+                      <button onclick = "copyFunction()">Copy</button>
+                      <div id = "let-know-copied"></div>
+                    </p> -->
+                    <!-- <p>I need some support</p>
+                    <button onclick = "copyFunction()">Copy</button> -->
+                  </div>
+
                   <script>
                     //comet chat demo: https://www.cometchat.com/docs/chat-widgets/web#embedded-layout
                     const element = document.getElementById("cometchat-button");
                     element.addEventListener("click", openChat);
+
+                    function copyFunction() {
+                      // var text = document.getElementById("copy-text2").value;
+                      navigator.clipboard.writeText("I'm ok!");
+                      document.getElementById("let-know-copied").innerHTML = "Copied!";
+                    }
+                    function copyFunction2() {
+                      // var text = document.getElementById("copy-text2").value;
+                      navigator.clipboard.writeText("I need some support");
+                      document.getElementById("let-know-copied2").innerHTML = "Copied!";
+                    }
 
                     
                     function openChat() {
@@ -268,6 +289,9 @@ input {
                         return;
                       }
                       document.getElementById("get-username").innerHTML = "";
+                      document.getElementById("supportMessages").innerHTML = "<p>Copy the check in text below if needed!</p><p id = \"copy-text\">I'm ok!<button onclick = \"copyFunction()\">Copy</button></p>" +
+                      "<p id = \"copy-text2\">I need some support<button onclick = \"copyFunction2()\">Copy</button><div id = \"let-know-copied2\"></div></p>";
+                      
                       var width = window.innerWidth
                       || document.documentElement.clientWidth
                       || document.body.clientWidth;

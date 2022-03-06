@@ -19,6 +19,16 @@ Note: any .css or .scss files included in the 'styles' directory
 will be correctly compiled during `gulp serve` and `gulp`
  */
 
+ #no-user {
+  font-size: 13px;
+  font-style: italic;
+}
+
+#username-input {
+  border-bottom-style: solid;
+  border-bottom-color:rgb(218, 214, 214);
+}
+
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   margin: 0;
