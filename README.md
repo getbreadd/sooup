@@ -25,6 +25,8 @@ For those with mental illnesses, or struggling with their mental illnesses, it i
 
 ## Further/Future Development
 
+This was a hackathon product developed for cmd-f!
+
 😊 The original idea is to have had this as a IOS widget, with the main feature of simple yes or no safety and assurance questions being it's core. Most of us didn't have Apple devices, so carrying out such implementations would have been difficult in such little time. Future Apple store app launch can be expected as it was the main intention. Please refer to the recorded video for further explaination on this. 
 
 
